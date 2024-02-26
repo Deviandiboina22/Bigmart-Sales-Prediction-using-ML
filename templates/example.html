@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BigMart Sales Prediction</title>
+    <style>
+        .banner{
+            width: 100%;
+            height: auto;
+        }
+        .background-image{
+            background-image:url('./img1.jpeg');
+            height: 1000px; 
+           
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed;
+    
+           
+        }
+        form {
+        background-color: 	#f5f6f7;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 500px;
+      }
+      h1 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px;
+        background-color: 	#f3f2ee;
+        border: 1px solid #A9A9A9;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <img  class="banner" src="./img3.jpeg">
+    </div>
+    <div class="background-image">
+
+   
+      <form class="" action="/predict" method="post">
+            <h1>BigMart Sales Prediction</h1>
+            <label for="Item_Weight">Item Weight:</label>
+            <input type="text" id="Item_Weight" name="Item_Weight" placeholder="Enter item weight...">
+            <label for="Item_Visibility">Item Visibility:</label>
+            <input type="text" id="Item_Visibility" name="Item_Visibility" placeholder="Enter item visibility...">
+            <label for="Item_MRP">Item MRP:</label>
+            <input type="text" id="Item_MRP" name="Item_MRP" placeholder="Enter item MRP...">
+            <label for="Item_Type">Item Type:</label>
+            <select class="form-control chosenn" name="item_type" required="required">
+              <option value="" selected>Item Type</option>
+                         <option value="0">Baking Goods</option>
+                         <option value="1">Breads</option>
+                         <option value="2">Breakfast</option>
+                         <option value="3">Canned</option>
+                            <option value="4">Dairy</option>
+                         <option value="5">Frozen Foods</option>
+                         <option value="6">Fruits and Vegetables</option>
+                         <option value="7">Hard Drinks</option>
+                              <option value="8">Health and Hygiene</option>
+                         <option value="9">Household</option>
+                         <option value="10">Meat</option>
+                         <option value="11">Others</option>
+                            <option value="12">Seafood</option>
+                         <option value="13">Snack Foods</option>
+                         <option value="14">Soft Drinks</option>
+                         <option value="15">Starchy Foods</option>
+                       </select>
+            <label for="Outlet_Establishment_Year">Outlet Establishment Year:</label>
+            <input type="text" id="Outlet_Establishment_Year" name="Outlet_Establishment_Year" placeholder="Enter outlet establishment year...">
+            <label for="Outlet_Size">Outlet Size:</label>
+            <select id="Outlet_Size" name="Outlet_Size">
+              <option value="">Select outlet size...</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            <label for="Outlet_Location_Type">Outlet Location Type:</label>
+            <select id="Outlet_Location_Type" name="Outlet_Location_Type">
+              <option value="">Select outlet location type...</option>
+              <option value="Tier 1">Tier 1</option>
+              <option value="Tier 2">Tier 2</option>
+              <option value="Tier 3">Tier 3</option>
+            </select>
+            <input type="submit" value="Predict Sales">
+          </form>
+    </div>
+    
+</body>
+</html>
